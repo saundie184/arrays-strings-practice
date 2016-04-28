@@ -38,9 +38,9 @@ function oneAway(str1, str2) {
         // console.log(charactersToReplace);
         for (var m = 0; m < len; m++) {
             for (var n = 0; n < charactersToReplace.length; n++) {
-              // console.log(charactersToReplace);
+                // console.log(charactersToReplace);
                 if (str2[m] === charactersToReplace[n]) {
-                  // console.log(charactersToReplace[n]);
+                    // console.log(charactersToReplace[n]);
                     charactersToReplace.splice(n, 1);
                 }
             }
@@ -48,8 +48,8 @@ function oneAway(str1, str2) {
         // console.log(charactersToReplace);
         if (charactersToReplace.length <= 1) {
             return true;
-        } else{
-          return false;
+        } else {
+            return false;
         }
 
 
@@ -72,8 +72,27 @@ function oneAway(str1, str2) {
     }
 }
 
-console.log(oneAway('pale', 'ple')); //true
-console.log(oneAway('pales', 'pale')); //true
-console.log(oneAway('pale', 'bale')); //true
-console.log(oneAway('pale', 'bake')); //false
-console.log(oneAway('apple', 'aple')); //true
+// console.log(oneAway('pale', 'ple')); //true
+// console.log(oneAway('pales', 'pale')); //true
+// console.log(oneAway('pale', 'bale')); //true
+// console.log(oneAway('pale', 'bake')); //false
+// console.log(oneAway('apple', 'aple')); //true
+
+//Give me Diamond - Code Wars
+// You need to print a shape on the screen using asterisk ("*") characters.
+// The shape that will be returned from print method resembles a diamond,
+//where the number provided as input represents the number of *’s printed on the middle line.
+// The line above and below will be centered and will have 2 less *’s than the middle line.
+//This reduction by 2 *’s for each line continues until a line with a single * is printed at the top and bottom of the figure.
+
+// Return null if input is even number (as it is not possible to print diamond with even number).
+
+function diamond(n) {
+    var diam = '';
+    for (var i = 0; i < n; i++) {
+        diam += '*';
+    }
+    return diam;
+}
+
+console.log(diamond(3));
