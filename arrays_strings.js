@@ -88,6 +88,9 @@ function oneAway(str1, str2) {
 // Return null if input is even number (as it is not possible to print diamond with even number).
 
 function diamond(n) {
+  if(n % 2 === 0){
+    return null;
+  }
     var diam = '';
     for (var i = 0; i < n; i++) {
         diam += '*';
@@ -95,4 +98,4 @@ function diamond(n) {
     return diam;
 }
 
-console.log(diamond(3));
+console.log(diamond(2));
