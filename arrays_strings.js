@@ -88,6 +88,7 @@ function oneAway(str1, str2) {
 // Return null if input is even number (as it is not possible to print diamond with even number).
 
 function diamond(n) {
+  //account for even inputs
   if(n % 2 === 0){
     return null;
   }
