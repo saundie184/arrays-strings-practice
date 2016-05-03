@@ -99,4 +99,18 @@ function diamond(n) {
     return diam;
 }
 
-console.log(diamond(2));
+// console.log(diamond(2));
+
+function urlify(str,len){
+  var newString = "";
+  for(var i = 0; i < len; i++){
+    if(str[i] !== " "){
+      newString += str[i];
+    } else if(str[i] === " "){
+      newString += "%20";
+    }
+  }
+  return newString;
+}
+
+console.log(urlify("Mr John Smith   ", 13));
