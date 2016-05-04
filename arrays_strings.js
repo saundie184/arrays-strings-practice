@@ -88,10 +88,10 @@ function oneAway(str1, str2) {
 // Return null if input is even number (as it is not possible to print diamond with even number).
 
 function diamond(n) {
-  //account for even inputs
-  if(n % 2 === 0){
-    return null;
-  }
+    //account for even inputs
+    if (n % 2 === 0) {
+        return null;
+    }
     var diam = '';
     for (var i = 0; i < n; i++) {
         diam += '*';
@@ -101,16 +101,57 @@ function diamond(n) {
 
 // console.log(diamond(2));
 
-function urlify(str,len){
-  var newString = "";
-  for(var i = 0; i < len; i++){
-    if(str[i] !== " "){
-      newString += str[i];
-    } else if(str[i] === " "){
-      newString += "%20";
+function urlify(str, len) {
+    var newString = "";
+    for (var i = 0; i < len; i++) {
+        if (str[i] !== " ") {
+            newString += str[i];
+        } else if (str[i] === " ") {
+            newString += "%20";
+        }
     }
-  }
-  return newString;
+    return newString;
 }
 
-console.log(urlify("Mr John Smith   ", 13));
+// console.log(urlify("Mr John Smith   ", 13));
+
+function compress(str) {
+    var prev;
+    var compStr = "";
+    var count = 1;
+    for (var i = 0; i < str.length; i++) {
+        if (prev === undefined) {
+            compStr += str[i];
+            prev = str[i];
+        } else if (str[i] === prev) {
+            count++;
+        } else {
+            compStr += count;
+            compStr += str[i];
+            prev = str[i];
+            count = 1;
+        }
+    }
+    compStr += count;
+    if (str.length > compStr.length) {
+        return compStr;
+    } else {
+        return str;
+    }
+}
+
+console.log(compress("aabbbcddd"));
+
+console.log("i'm a lasagna hog".split("").reverse().join("")); //returns mirror
+
+var foo = {n: 1};
+var bar = foo;
+foo.x = foo
+foo = {n: 2};
+console.log(foo);
+
+console.log('one');
+setTimeout(function() {
+  console.log('two');
+}, 0);
+console.log('three');
