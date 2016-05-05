@@ -99,7 +99,7 @@ function diamond(n) {
     return diam;
 }
 
-// console.log(diamond(2));
+console.log(diamond(3));
 
 function urlify(str, len) {
     var newString = "";
@@ -140,18 +140,18 @@ function compress(str) {
     }
 }
 
-console.log(compress("aabbbcddd"));
+// console.log(compress("aabbbcddd"));
 
-console.log("i'm a lasagna hog".split("").reverse().join("")); //returns mirror
+// console.log("i'm a lasagna hog".split("").reverse().join("")); //returns mirror
 
 var foo = {n: 1};
 var bar = foo;
 foo.x = foo
 foo = {n: 2};
-console.log(foo);
+// console.log(foo);
 
-console.log('one');
+// console.log('one');
 setTimeout(function() {
-  console.log('two');
+  // console.log('two');
 }, 0);
-console.log('three');
+// console.log('three');
