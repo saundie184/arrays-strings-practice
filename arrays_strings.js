@@ -89,17 +89,32 @@ function oneAway(str1, str2) {
 
 function diamond(n) {
     //account for even inputs
-    if (n % 2 === 0) {
+    if (n % 2 === 0 || n === 0 || n < 0) {
         return null;
     }
-    var diam = '';
-    for (var i = 0; i < n; i++) {
-        diam += '*';
+    var diam = '*';
+
+    //print *\n and then add 2 until it reaches n
+    for (var i = 0; i < n; i += 2) {
+        // console.log(i);
+        var top = '';
+        for (var j = 0; j < i; j++) {
+            top += '*';
+        }
+        diam += top + '\n';
+    }
+    for (var k = n; k > 0; k -= 2) {
+        // console.log(k);
+        var bottom = '';
+        for (var j = 0; j < k; j++) {
+            bottom += '*';
+        }
+        diam += bottom + '\n';
     }
     return diam;
 }
 
-console.log(diamond(3));
+console.log(diamond(9));
 
 function urlify(str, len) {
     var newString = "";
@@ -144,14 +159,18 @@ function compress(str) {
 
 // console.log("i'm a lasagna hog".split("").reverse().join("")); //returns mirror
 
-var foo = {n: 1};
+var foo = {
+    n: 1
+};
 var bar = foo;
 foo.x = foo
-foo = {n: 2};
+foo = {
+    n: 2
+};
 // console.log(foo);
 
 // console.log('one');
 setTimeout(function() {
-  // console.log('two');
+    // console.log('two');
 }, 0);
 // console.log('three');
