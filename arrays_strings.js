@@ -114,7 +114,7 @@ function diamond(n) {
     return diam;
 }
 
-console.log(diamond(9));
+// console.log(diamond(9));
 
 function urlify(str, len) {
     var newString = "";

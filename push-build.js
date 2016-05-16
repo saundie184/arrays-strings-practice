@@ -4,17 +4,21 @@
 
 
 function Node(data) {
-  this.data = data;
-  this.next = null;
+    this.data = data;
+    this.next = null;
 }
 
 function push(head, data) {
-  // Go.
-  return 'push';
+    // return new Node(head, data);
 }
 
 function buildOneTwoThree() {
-  // Go.
+    // Go.
 }
 
-console.log(push());
+var chained = null
+chained = push(chained, 3);
+chained = push(chained, 2);
+chained = push(chained, 1);
+console.log(push(chained, 8)); //=== 8 -> 1 -> 2 -> 3 -> null
+// console.log(push(1,2));
