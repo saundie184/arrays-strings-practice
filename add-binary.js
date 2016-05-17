@@ -41,4 +41,7 @@ function addBinary(a, b) {
     return convert(a);
 }
 // console.log(addBinary(13, 89));
-console.log(convert(13));
+// console.log(convert(13));
+// console.log(typeof null);
+// console.log(typeof NaN);
+// console.log(isNaN(x))
