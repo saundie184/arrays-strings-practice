@@ -43,7 +43,7 @@ var obj = {
    prop: {
       fullname: 'Aurelio De Rosa',
       getFullname: function() {
-        // console.log(obj.prop.fullname);
+        console.log(this.fullname);
          return this.fullname;
       }
    }
