@@ -172,5 +172,5 @@ foo = {
 // console.log('one');
 setTimeout(function() {
     // console.log('two');
-}, 10);
+}, 0);
 // console.log('three');
