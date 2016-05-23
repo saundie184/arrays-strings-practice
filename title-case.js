@@ -15,7 +15,7 @@ for(var i = 1; i <= wordArray.length-1; i++){
 //always push the first word to the array
 
 //uppercase each first letter of each item in the array
-
+console.log(minorWordsArray);
 return wordArray;
 }
 
