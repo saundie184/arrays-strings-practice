@@ -2,38 +2,47 @@
 
 function titleCase(title, minorWords) {
 
-var wordArray = title.split(' ');
-var minorWordsArray = title.split('');
-//loop through title
-for(var i = 1; i <= wordArray.length-1; i++){
-  console.log(wordArray[i]);
-  for(var j = 0; j <= minorWordsArray.length-1; j++){
-    console.log(minorWordsArray[j]);
-  }
-}
-//push all the words to an array that are not in minorWords
-//always push the first word to the array
+    var wordArray = title.split(' ');
+    var titleCase = '';
+    // var minorWordsArray = minorWords.split(' ');
+    // var titleCaseArray = [title[0].toUpperCase()];
+    function capitalize(w) {
+        var first = w.charAt(0).toUpperCase();
+        var rest = w.substr(1);
+        return first + rest;
+    }
+    //ignore minor words
+    // var minorWordsArr = typeof minorWords === 'undefined' ? [] : minorWords.split(' ').map(function(w) {
+    //     return w.toLowerCase();
+    // });
 
-//uppercase each first letter of each item in the array
-console.log(minorWordsArray);
-return wordArray;
+    for (var i = 0; i < wordArray.length; i++) {
+        // console.log(wordArray[i]);
+        titleCase += capitalize(wordArray[i]) + ' ';
+    }
+
+    //uppercase each first letter of each item in the array
+
+    return titleCase;
 }
 
 
 console.log(titleCase('a clash of KINGS', 'a an the of')); // should return: 'A Clash of Kings'
 // console.log(titleCase('THE WIND IN THE WILLOWS', 'The In')); // should return: 'The Wind in the Willows'
 // console.log(titleCase('the quick brown fox')); // should return: 'The Quick Brown Fox'
-function test() {
-   var a;
-   function foo() {
-      return 2;
-   }
 
-   console.log(a);
-   console.log(foo());
 
-   a = 1;
-}
+// function test() {
+//    var a;
+//    function foo() {
+//       return 2;
+//    }
+//
+//    console.log(a);
+//    console.log(foo());
+//
+//    a = 1;
+// }
 
 // test();
 
